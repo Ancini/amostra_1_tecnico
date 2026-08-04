@@ -1,0 +1,158 @@
+/* --- RESETS E VARIÁVEIS --- */
+:root {
+  --primary-color: #c09d49;
+  --primary-dark: #997a30;
+  --bg-card: #fcf9ee;
+  --border-card: #e5d8b0;
+  --text-color: #333333;
+  --text-muted: #555555;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- ESTRUTURA DO SLIDE (Aproximado para proporção 16:9) --- */
+.slide-container {
+  width: 100%;
+  max-width: 1100px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- CABEÇALHO --- */
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  padding: 15px;
+  text-align: center;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+  width: fit-content;
+}
+
+/* --- CARDS (SEÇÕES) --- */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-text {
+  flex: 1;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.card-image {
+  flex: 0 0 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- LISTA DE GLOSSÁRIO --- */
+.glossary-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glossary-list li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.glossary-list strong {
+  color: var(--primary-dark);
+}
+
+/* --- RODAPÉ --- */
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-top: auto;
+}
+
+/* --- RESPONSIVIDADE (Para telas menores) --- */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .intro-card {
+    flex-direction: column-reverse;
+  }
+
+  .card-image {
+    width: 100%;
+    flex: none;
+    height: 200px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
