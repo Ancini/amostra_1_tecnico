@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Configurações Gerais & Reset
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333333;
+}
+
+/* ==========================================================================
+   Container Principal (Slide)
+   ========================================================================== */
+.slide-container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.header {
+  background: linear-gradient(180deg, #d4b068 0%, #b89243 100%);
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.header-title {
+  color: #ffffff;
+  font-family: 'Georgia', serif; /* Fonte fluida e elegante para o título */
+  font-style: italic;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   Conteúdo Principal
+   ========================================================================== */
+.content {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Títulos das Seções com Linha Dourada */
+.section-title-with-line {
+  display: flex;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #c49a45;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-title-with-line::before,
+.section-title-with-line::after {
+  content: "";
+  height: 2px;
+  background-color: #d4b068;
+}
+
+.section-title-with-line::before {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.section-title-with-line::after {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.section-title-with-line .icon {
+  font-style: normal;
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+/* Grid para os Cards de Perfil */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+/* Card Individual */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagem de Perfil */
+.avatar-box {
+  width: 140px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caixas de Texto (Perfil) */
+.info-box {
+  flex: 1;
+  background-color: #f7f3e8; /* Bege suave do design */
+  border: 1px solid #dcd1be;
+  border-radius: 12px;
+  padding: 15px 20px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-box h3 {
+  font-family: 'Georgia', serif;
+  color: #b8860b; /* Dourado escuro / Texto em destaque */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.15);
+}
+
+.info-box p {
+  font-family: 'Georgia', serif;
+  color: #b8860b;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.info-box .sub-info {
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+.footer {
+  background: linear-gradient(180deg, #d4b068 0%, #b89243 100%);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.footer p {
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Responsividade (Telas menores)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .avatar-box {
+    width: 100%;
+    height: 180px;
+  }
+
+  .info-box {
+    height: auto;
+  }
+}
