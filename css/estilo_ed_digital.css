@@ -14,21 +14,22 @@ body {
     padding: 20px;
 }
 
-/* Container do Card */
+/* Container principal ajustado para se expandir na tela */
 .slide-card {
-    width: 960px;
+    width: 100%;
+    max-width: 1200px;
     background-color: #ffffff;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
 }
 
-/* Banner Superior Dourado */
+/* Header Dourado com alto contraste */
 .slide-header {
-    background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #c59b27 100%);
-    padding: 16px;
+    background: linear-gradient(135deg, #c59b27 0%, #e6c86e 50%, #b38918 100%);
+    padding: 22px;
     text-align: center;
 }
 
@@ -36,23 +37,23 @@ body {
     color: #ffffff;
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 600;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Título da Seção */
 .section-title-wrapper {
-    padding: 20px 40px 10px 40px;
+    padding: 25px 50px 15px 50px;
 }
 
 .section-title {
-    color: #d4af37;
-    font-size: 18px;
+    color: #b38918;
+    font-size: 22px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .section-title::before {
@@ -62,23 +63,23 @@ body {
 
 /* Container do Conteúdo */
 .content-container {
-    padding: 10px 40px 30px 40px;
+    padding: 10px 50px 40px 50px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
-/* Linha com Imagem/Link + Texto */
+/* Linhas com Logos e Textos */
 .info-row {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
-/* Link na Imagem */
+/* Container do Link/Imagem */
 .logo-link {
-    width: 170px;
-    height: 75px;
+    width: 180px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,31 +98,32 @@ body {
     object-fit: contain;
 }
 
-/* Caixa de Texto Amarelada */
+/* Caixas de Texto Legíveis */
 .text-box {
     flex-grow: 1;
-    background-color: #faf7f0;
-    border: 1px solid #e2d8c3;
+    background-color: #fdfbf7;
+    border: 1px solid #e8dec8;
     border-radius: 12px;
-    padding: 16px 22px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .text-box p {
-    color: #333333;
-    font-size: 13px;
-    line-height: 1.5;
+    color: #1a1a1a;
+    font-size: 15px;
+    line-height: 1.6;
     font-weight: 500;
 }
 
-/* Rodapé Dourado */
+/* Rodapé */
 .slide-footer {
-    background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #c59b27 100%);
-    padding: 6px;
+    background: linear-gradient(135deg, #c59b27 0%, #e6c86e 50%, #b38918 100%);
+    padding: 10px;
     text-align: center;
 }
 
 .slide-footer p {
     color: #ffffff;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
 }
